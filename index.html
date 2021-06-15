@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="svg/man.svg" />
+    <title>Hactuns Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery.js" defer></script>
+    <script src="js/bootstrap.min.js" defer></script>
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="145" class="position-relative" id="#">
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top shadow py-3 border-bottom px-5 mx-auto">
+      <a class="navbar-brand d-flex text-decoration-none font-weight-bold" href="#">Hactuns</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse ml-auto" id="navCollapse">
+        <ul class="navbar-nav container-fluid d-flex justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skill">Skill</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#work">Work</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="snap-scroll">
+      <section id="home" class="bg-first">
+        <img src="svg/1080.png" class="img-fluid my-5" />
+      </section>
+      <section id="about" class="bg-second pt-5">
+        <div class="container-fluid px-5 mx-auto pb-5">
+          <div class="row mx-5">
+            <div class="col-md-6 px-0">
+              <h2 class="font-weight-bolder my-3 d-flex">About Me</h2>
+              <hr class="w-50 hr" />
+              <div class="d-flex py-3">
+                <img src="svg/id-card.svg" class="icon mx-2" />
+                <p class="font-weight-bolder my-auto" style="font-size: 1.5rem !important">TRAN KHAC TUAN</p>
+              </div>
+              <div class="d-flex py-3">
+                <img src="svg/birthday.svg" class="icon mx-2" />
+                <p class="font-weight-bolder my-auto" style="font-size: 1.5rem !important">MAR 29, 1999</p>
+              </div>
+              <div class="d-flex py-3">
+                <img src="svg/web-development.svg" class="icon mx-2" />
+                <p class="font-weight-bolder my-auto" style="font-size: 1.5rem !important">FULL STACK DEVELOPER</p>
+              </div>
+              <div class="d-flex py-3">
+                <img src="svg/location.svg" class="icon mx-2" />
+                <p class="font-weight-bolder my-auto" style="font-size: 1.5rem !important">D7, HOCHIMINH CITY, VIETNAM</p>
+              </div>
+            </div>
+            <div class="col-md-6 justify-content-center align-items-center d-flex">
+              <img src="svg/p2.svg" class="img-fluid text-center d-flex" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="experience" class="bg-first">
+        <div class="container-fluid px-5 mx-auto">
+          <div class="row mx-5 mb-4">
+            <div class="col px-0">
+              <h2 class="font-weight-bolder my-3 pt-4 d-flex">My Education</h2>
+              <hr class="w-25 mx-5 hr" />
+              <ul class="list-group">
+                <li class="list-item my-4">
+                  <article>
+                    <div class="row">
+                      <div class="col-md-1 px-0 text-right ml-auto">
+                        <svg viewbox="0 0 12 12" class="timeline">
+                          <circle cx="6" cy="6" r="6" fill="currentColor"></circle>
+                          <circle cx="6" cy="6" r="11" fill="none" stroke="currentColor" stroke-width="2"></circle>
+                          <line x1="6" y1="18" x2="6" y2="90" stroke-width="3" stroke="currentColor" style="color: #edf2f7" />
+                        </svg>
+                      </div>
+                      <div class="col-md-2 px-0">
+                        <time datetime="2021-04-05T19:00:00.000Z">
+                          <p class="mx-4 font-weight-bold date">Sep 2017</p>
+                        </time>
+                      </div>
+                      <div class="col-md-9">
+                        <h3>Saigon University</h3>
+                        <p>Major: Software Engineer</p>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+                <li class="list-item my-4">
+                  <article>
+                    <div class="row">
+                      <div class="col-md-1 px-0 text-right ml-auto">
+                        <svg viewbox="0 0 12 12" class="timeline">
+                          <circle cx="6" cy="6" r="6" fill="currentColor" style="color: #edf2f7"></circle>
+                          <line x1="6" y1="18" x2="6" y2="80" stroke-width="3" stroke="currentColor" style="color: #edf2f7" />
+                        </svg>
+                      </div>
+                      <div class="col-md-2 px-0">
+                        <time datetime="2021-04-05T19:00:00.000Z">
+                          <p class="mx-4 font-weight-bold date">Sep 2014 - May 2017</p>
+                        </time>
+                      </div>
+                      <div class="col-md-9">
+                        <h3>Huynh Thuc Khang High School</h3>
+                        <p>Vinh, Nghe An</p>
+                      </div>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skill" class="bg-second pt-4">
+        <div class="container-fluid px-5 mx-auto pb-5">
+          <div class="row mx-5">
+            <div class="col px-0">
+              <h2 class="font-weight-bolder my-3 pt-4 d-flex">My Skills</h2>
+              <hr class="w-25 mx-5 hr" />
+            </div>
+          </div>
+
+          <div class="row mx-2 d-flex justify-content-center px-5">
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow py">
+                <img src="svg/html.svg" />
+                <p class="mb-0">HTML</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow">
+                <img src="svg/css.svg" />
+                <p class="mb-0">CSS</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow">
+                <img src="svg/javascript.svg" />
+                <p class="mb-0">Javascript</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow">
+                <img src="svg/bootstrap.svg" />
+                <p class="mb-0">Bootstrap</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow">
+                <img src="svg/jquery.svg" />
+                <p class="mb-0">Jquery</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow">
+                <img src="svg/mysql.svg" />
+                <p class="mb-0">MySQL</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow">
+                <img src="svg/php.svg" />
+                <p class="mb-0">PHP</p>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-3 col-md-3 col-sm-4">
+              <div class="card border-0 d-flex align-items-center justify-content-center p-2 m-0 shadow">
+                <img src="svg/java.svg" />
+                <p class="mb-0">Java</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work" class="bg-first">
+        <div class="container-fluid"></div>
+      </section>
+    </div>
+
+    <footer id="footer" class="bg-second border-top py-4">
+      <div class="container d-flex justify-content-center align-items-center h-100 px-2">
+        <a href="https://instagram.com/justafoolishh" target="blank">
+          <img src="so/instagram.svg" class="img-fluid footer--icon" />
+        </a>
+        <a href="https://facebook.com/justafoolish" target="blank">
+          <img src="so/facebook.svg" class="img-fluid footer--icon" />
+        </a>
+        <a href="https://twitter.com/hactuns" target="blank">
+          <img src="so/twitter.svg" class="img-fluid footer--icon" />
+        </a>
+        <a href="https://github.com/justafoolish" target="blank">
+          <img src="so/github.svg" class="img-fluid footer--icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/khactuantran" target="blank">
+          <img src="so/linkedin.svg" class="img-fluid footer--icon" />
+        </a>
+        <a href="https://mail.google.com/mail/u/0/?fs=1&to=justafoolishh@gmail.com&tf=cm" target="blank">
+          <img src="so/gmail.png" class="img-fluid footer--icon" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
