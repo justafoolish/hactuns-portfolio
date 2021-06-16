@@ -5,7 +5,7 @@ html {
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .btn:focus {
@@ -14,16 +14,16 @@ body {
 }
 
 .navbar-brand {
-  font-size: calc(1.325rem + .9vw) !important;
+  font-size: calc(1.325rem + 0.9vw) !important;
 }
 
 .nav-item {
   margin: 0 5px 0 5px;
   font-size: 1.25rem !important;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .nav-item > .nav-link {
@@ -32,7 +32,7 @@ body {
 
 .nav-item > .nav-link:after {
   display: block;
-  content: '';
+  content: "";
   border-bottom: solid 3px #ff7f50;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -143,7 +143,6 @@ li > a {
 
 .date {
   color: #6f6f6f;
-  margin-top: 0.18rem !important;
 }
 
 a {
@@ -219,5 +218,53 @@ a {
           transition-duration: 0.2s;
   -webkit-transform: scale(110%);
           transform: scale(110%);
+}
+
+.list-item {
+  margin-bottom: 13px !important;
+}
+
+.outer-circle {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.inner-circle {
+  border-radius: 50%;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  width: 14px;
+  height: 14px;
+  background-color: black;
+}
+
+.dot-circle {
+  border-radius: 50%;
+  -webkit-transform: translate(70%, 50%);
+          transform: translate(70%, 50%);
+  width: 14px;
+  height: 14px;
+  background-color: #edf2f7;
+}
+
+.outer-circle {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+}
+
+.line {
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: #edf2f7;
+  -webkit-transform: translate(25%, 0%);
+          transform: translate(25%, 0%);
+  left: 14px;
+  top: 32px;
 }
 /*# sourceMappingURL=main.css.map */
