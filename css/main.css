@@ -222,6 +222,14 @@ li > a {
   .project-shadow {
     margin: 0 1.5rem 0 1.5rem !important;
   }
+  .info-section {
+    bottom: 5% !important;
+    left: 5% !important;
+  }
+  .info-section__right {
+    bottom: 5% !important;
+    right: 5% !important;
+  }
 }
 
 @media (min-width: 720px) {
