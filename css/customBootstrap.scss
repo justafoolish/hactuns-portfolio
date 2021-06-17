@@ -1,7 +1,9 @@
 .btn:focus {
   box-shadow: none;
 }
-
+.navbar-toggler-icon {
+  background-image: url(../svg/menu.svg) !important;
+}
 .navbar-brand {
   font-size: calc(1.325rem + 0.9vw) !important;
 }
