@@ -133,24 +133,9 @@ li > a {
   margin-bottom: 2rem !important;
 }
 
-.footer--icon {
-  -webkit-filter: saturate(0%) brightness(70%) contrast(1000%);
-          filter: saturate(0%) brightness(70%) contrast(1000%);
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  width: 37px;
-  height: 37px;
-}
-
-.footer--icon:hover {
-  -webkit-filter: none;
-          filter: none;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
-  -webkit-transform: scale(110%);
-          transform: scale(110%);
-}
-
+/*
+  Edu n Exp Section
+*/
 .outer-circle {
   border-radius: 50%;
   width: 32px;
@@ -195,6 +180,9 @@ li > a {
   top: 32px;
 }
 
+/*
+   Work Section
+*/
 .project-shadow {
   -webkit-box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45) !important;
           box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45) !important;
@@ -227,36 +215,58 @@ li > a {
   transition: opacity 0.3s ease-in-out;
 }
 
-.project-number {
-  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
-  display: block;
-  position: absolute;
-  top: -73px;
-  right: -17px;
-  font-size: 11.5625em !important;
-  color: #99999d;
-  overflow: hidden;
-  font-weight: bolder !important;
-  opacity: 0;
-  z-index: 90;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+@media (max-width: 719px) {
+  .project {
+    padding: 0 !important;
+  }
+  .project-shadow {
+    margin: 0 1.5rem 0 1.5rem !important;
+  }
 }
 
-.project-number__left {
-  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
-  display: block;
-  position: absolute;
-  top: -73px;
-  left: -20px;
-  font-size: 11.5625em !important;
-  color: #99999d;
-  overflow: hidden;
-  font-weight: bolder !important;
-  opacity: 0;
-  z-index: 90;
-  -webkit-transition: opacity 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+@media (min-width: 720px) {
+  .list-group {
+    padding: 0 3rem 1.5rem 3rem;
+  }
+  #p1::before {
+    content: "01";
+  }
+  #p2::before {
+    content: "02";
+  }
+  #p3::before {
+    content: "03";
+  }
+  .project-number {
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    display: block;
+    position: absolute;
+    top: -73px;
+    right: -17px;
+    font-size: 11.5625em !important;
+    color: #99999d;
+    overflow: hidden;
+    font-weight: bolder !important;
+    opacity: 0;
+    z-index: 90;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .project-number__left {
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    display: block;
+    position: absolute;
+    top: -73px;
+    left: -20px;
+    font-size: 11.5625em !important;
+    color: #99999d;
+    overflow: hidden;
+    font-weight: bolder !important;
+    opacity: 0;
+    z-index: 90;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+  }
 }
 
 .project-mask {
@@ -278,8 +288,8 @@ li > a {
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
-  bottom: 90px;
-  left: 90px;
+  bottom: 10%;
+  left: 10%;
   z-index: 1000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -289,8 +299,8 @@ li > a {
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
-  bottom: 90px;
-  right: 90px;
+  bottom: 10%;
+  right: 10%;
   z-index: 1000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -370,5 +380,26 @@ li > a {
 .project-info__reverse:hover .project-mask {
   height: 100%;
   width: 100%;
+}
+
+/*
+ Footer
+*/
+.footer--icon {
+  -webkit-filter: saturate(0%) brightness(70%) contrast(1000%);
+          filter: saturate(0%) brightness(70%) contrast(1000%);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 37px;
+  height: 37px;
+}
+
+.footer--icon:hover {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
 }
 /*# sourceMappingURL=main.css.map */
