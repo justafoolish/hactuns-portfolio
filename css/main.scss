@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap");
+$roll: cubic-bezier(0.694, 0.048, 0.335, 1);
 
 html {
   scroll-behavior: smooth !important;
@@ -8,6 +9,67 @@ html {
 }
 body {
   font-family: "Ubuntu", sans-serif !important;
+}
+button:focus {
+  outline: none;
+}
+.navbar-toggler {
+  .bars {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3 $roll;
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: black;
+      margin-top: 7px;
+      &:first-child {
+        margin-top: 0;
+        transform: scaleX(1);
+        transition: transform 0.2s $roll;
+        transition-delay: 0.4s;
+      }
+      &:nth-child(3) {
+        width: 65%;
+        transition: width 0.2s $roll;
+        transition-delay: 0.4s;
+      }
+    }
+    .other-bar {
+      width: 3px;
+      height: 0;
+      background-color: black;
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      margin-left: -3px;
+      transition: height 0.4s $roll;
+      z-index: 10;
+    }
+  }
+  &.is-menu-open {
+    .bars {
+      transform: rotate(45deg);
+      transition-delay: 0.4s;
+      span {
+        &:first-child {
+          transform: scaleX(0);
+          transition: transform 0.2s $roll;
+        }
+        &:nth-child(3) {
+          width: 0;
+          transition: width 0.2s $roll;
+        }
+      }
+      .other-bar {
+        height: 40px;
+        transition: height 0.2s $roll;
+        transition-delay: 0.3s;
+      }
+    }
+  }
 }
 
 .nav-item > .nav-link:after {
@@ -189,7 +251,7 @@ li > a {
 }
 @media (max-width: 575px) {
   .project-box > img {
-    object-fit: none; 
+    object-fit: none;
     object-position: center;
   }
   .project {
@@ -207,7 +269,7 @@ li > a {
     right: 5% !important;
   }
 }
-@media (max-width: 991px) and (min-width: 576px){
+@media (max-width: 991px) and (min-width: 576px) {
   .project {
     padding: 0 !important;
   }
@@ -250,7 +312,7 @@ li > a {
     opacity: 0;
     z-index: 90;
     transition: opacity 0.5s ease-in-out;
-  } 
+  }
 }
 @media (min-width: 992px) {
   .list-group {
@@ -384,14 +446,14 @@ li > a {
  Footer
 */
 .footer--icon {
-    filter: saturate(0%) brightness(70%) contrast(1000%);
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    width: 37px;
-    height: 37px;
-  }
-  .footer--icon:hover {
-    filter: none;
-    transition-duration: 0.2s;
-    transform: scale(110%);
-  }
+  filter: saturate(0%) brightness(70%) contrast(1000%);
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 37px;
+  height: 37px;
+}
+.footer--icon:hover {
+  filter: none;
+  transition-duration: 0.2s;
+  transform: scale(110%);
+}
