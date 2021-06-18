@@ -52,7 +52,7 @@ button:focus {
   &.is-menu-open {
     .bars {
       transform: rotate(45deg);
-      transition-delay: 0.4s;
+      transition: transform 0.6s $roll;
       span {
         &:first-child {
           transform: scaleX(0);

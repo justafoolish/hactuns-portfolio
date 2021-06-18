@@ -68,8 +68,10 @@ button:focus {
 .navbar-toggler.is-menu-open .bars {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
+  transition: transform 0.6s cubic-bezier(0.694, 0.048, 0.335, 1), -webkit-transform 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
 }
 
 .navbar-toggler.is-menu-open .bars span:first-child {
