@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap");
 html {
   scroll-behavior: smooth !important;
-  scroll-padding-top: 10vh;
+  scroll-padding-top: 94px;
 }
 
 body {
