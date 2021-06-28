@@ -97,6 +97,21 @@ li > a {
   color: #ff7f50 !important;
   transform: scale(110%) !important;
 }
+.header-text {
+  position: relative;
+  display: inline-block !important;
+  margin-bottom: 2rem !important;
+}
+.header-text:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  height: 10%;
+  width: 200%;
+  background-color: #ff7f50;
+}
+
 .bg-first {
   background-color: #fff;
   color: black;
@@ -326,6 +341,9 @@ li > a {
   }
   #p3::before {
     content: "03";
+  }
+  #p4::before {
+    content: "04";
   }
   .project-number {
     font-family: "Fira Sans", Arial, Helvetica, sans-serif;
