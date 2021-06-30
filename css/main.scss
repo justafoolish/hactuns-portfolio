@@ -15,12 +15,12 @@ $roll: cubic-bezier(0.694, 0.048, 0.335, 1);
   transition: all .5s ease !important;
 }
 [data-scroll=fade-right] {
-  transform: translateX(150%);
+  transform: translateX(15%);
   opacity: 0;
   transition: all .75s ease;
 }
 [data-scroll=fade-left] {
-  transform: translateX(-150%);
+  transform: translateX(-15%);
   opacity: 0;
   transition: all .75s ease;
 }

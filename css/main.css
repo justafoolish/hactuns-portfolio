@@ -17,16 +17,16 @@
 }
 
 [data-scroll=fade-right] {
-  -webkit-transform: translateX(150%);
-          transform: translateX(150%);
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
   opacity: 0;
   -webkit-transition: all .75s ease;
   transition: all .75s ease;
 }
 
 [data-scroll=fade-left] {
-  -webkit-transform: translateX(-150%);
-          transform: translateX(-150%);
+  -webkit-transform: translateX(-15%);
+          transform: translateX(-15%);
   opacity: 0;
   -webkit-transition: all .75s ease;
   transition: all .75s ease;
