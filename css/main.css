@@ -1,6 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap");
+[data-scroll=fade-up] {
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
+  opacity: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.fade-up {
+  -webkit-transform: translateY(0%) !important;
+          transform: translateY(0%) !important;
+  opacity: 1 !important;
+  -webkit-transition: all .5s ease !important;
+  transition: all .5s ease !important;
+}
+
+[data-scroll=fade-right] {
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
+  opacity: 0;
+  -webkit-transition: all .75s ease;
+  transition: all .75s ease;
+}
+
+[data-scroll=fade-left] {
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+  opacity: 0;
+  -webkit-transition: all .75s ease;
+  transition: all .75s ease;
+}
+
+.fade-side {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+  opacity: 1 !important;
+  -webkit-transition: all .75s ease !important;
+  transition: all .75s ease !important;
+}
+
 html {
   scroll-behavior: smooth !important;
   scroll-padding-top: 94px;
