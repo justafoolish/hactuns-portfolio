@@ -3,6 +3,11 @@
           box-shadow: none;
 }
 
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
 .navbar-toggler-icon {
   background-image: url(../svg/menu.svg) !important;
 }
@@ -48,6 +53,17 @@ a {
   border-radius: 0.5rem;
 }
 
+.card img {
+  width: 7rem !important;
+  height: 7rem !important;
+  -webkit-filter: grayscale(10%);
+          filter: grayscale(10%);
+}
+
+.card p {
+  margin: 5px;
+}
+
 .card:hover {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
@@ -58,17 +74,6 @@ a {
 .card:hover img {
   -webkit-filter: none;
           filter: none;
-}
-
-.card > img {
-  width: 7rem !important;
-  height: 7rem !important;
-  -webkit-filter: grayscale(10%);
-          filter: grayscale(10%);
-}
-
-.card > p {
-  margin: 5px;
 }
 
 .list-item {

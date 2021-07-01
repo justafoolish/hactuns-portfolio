@@ -1,43 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@800&display=swap");
-[data-scroll=fade-up] {
+[data-scroll="fade-up"] {
   -webkit-transform: translateY(150%);
           transform: translateY(150%);
   opacity: 0;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .fade-up {
   -webkit-transform: translateY(0%) !important;
           transform: translateY(0%) !important;
   opacity: 1 !important;
-  -webkit-transition: all .5s ease !important;
-  transition: all .5s ease !important;
+  -webkit-transition: all 0.5s ease !important;
+  transition: all 0.5s ease !important;
 }
 
-[data-scroll=fade-right] {
+[data-scroll="fade-right"] {
   -webkit-transform: translateX(15%);
           transform: translateX(15%);
   opacity: 0;
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 }
 
-[data-scroll=fade-left] {
+[data-scroll="fade-left"] {
   -webkit-transform: translateX(-15%);
           transform: translateX(-15%);
   opacity: 0;
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all 0.75s ease;
+  transition: all 0.75s ease;
 }
 
 .fade-side {
   -webkit-transform: translateX(0%) !important;
           transform: translateX(0%) !important;
   opacity: 1 !important;
-  -webkit-transition: all .75s ease !important;
-  transition: all .75s ease !important;
+  -webkit-transition: all 0.75s ease !important;
+  transition: all 0.75s ease !important;
+}
+
+[data="panel"]::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 100%;
+  height: 101%;
+  -webkit-clip-path: polygon(100% 0, 85% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 85% 100%, 100% 100%);
+  background-color: white;
+  z-index: 0;
 }
 
 html {
@@ -136,10 +149,10 @@ button:focus {
           transition-delay: 0.3s;
 }
 
-.nav-item > .nav-link:after {
+.nav-item .nav-link:after {
   display: block;
   content: "";
-  border-bottom: solid 3px #ff7f50;
+  border-bottom: solid 2px #ff7f50;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -148,7 +161,7 @@ button:focus {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-.nav-item > .nav-link:hover:after {
+.nav-item .nav-link:hover::after {
   -webkit-transform: scaleX(1) !important;
           transform: scaleX(1) !important;
 }
@@ -157,11 +170,6 @@ li > a {
   color: #57606f !important;
   font-weight: bold;
   font-size: 1.25rem;
-}
-
-.container-fluid {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
 }
 
 .active {
@@ -176,13 +184,13 @@ li > a {
   margin-bottom: 2rem !important;
 }
 
-.header-text:after {
+.header-text::after {
   content: "";
   position: absolute;
   bottom: -15px;
   left: 0;
   height: 10%;
-  width: 200%;
+  width: 130%;
   background-color: #ff7f50;
 }
 
@@ -265,6 +273,7 @@ li > a {
   .quote {
     margin-top: 8rem !important;
     padding: 0 14rem 0 14rem !important;
+    overflow: hidden;
   }
 }
 
@@ -370,11 +379,11 @@ li > a {
   .project-shadow {
     margin: 0 1.5rem 0 1.5rem !important;
   }
-  .info-section {
+  .info--section {
     bottom: 5% !important;
     left: 5% !important;
   }
-  .info-section__right {
+  .info--section__right {
     bottom: 5% !important;
     right: 5% !important;
   }
@@ -491,7 +500,7 @@ li > a {
   transition: width 0.15s;
 }
 
-.info-section {
+.info--section {
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
@@ -502,7 +511,7 @@ li > a {
   transition: all 0.2s ease-in-out;
 }
 
-.info-section__right {
+.info--section__right {
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
@@ -557,12 +566,12 @@ li > a {
   width: 100%;
 }
 
-.project-info:hover .info-section {
+.project-info:hover .info--section {
   -webkit-transform: scale(110%);
           transform: scale(110%);
 }
 
-.project-info__reverse:hover .info-section__right {
+.project-info__reverse:hover .info--section__right {
   -webkit-transform: scale(110%);
           transform: scale(110%);
 }

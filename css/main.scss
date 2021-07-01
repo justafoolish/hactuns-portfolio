@@ -4,31 +4,45 @@
 $roll: cubic-bezier(0.694, 0.048, 0.335, 1);
 
 //Animate
-[data-scroll=fade-up] {
+[data-scroll="fade-up"] {
   transform: translateY(150%);
   opacity: 0;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .fade-up {
   transform: translateY(0%) !important;
   opacity: 1 !important;
-  transition: all .5s ease !important;
+  transition: all 0.5s ease !important;
 }
-[data-scroll=fade-right] {
+[data-scroll="fade-right"] {
   transform: translateX(15%);
   opacity: 0;
-  transition: all .75s ease;
+  transition: all 0.75s ease;
 }
-[data-scroll=fade-left] {
+[data-scroll="fade-left"] {
   transform: translateX(-15%);
   opacity: 0;
-  transition: all .75s ease;
+  transition: all 0.75s ease;
 }
 .fade-side {
   transform: translateX(0%) !important;
   opacity: 1 !important;
-  transition: all .75s ease !important;
+  transition: all 0.75s ease !important;
 }
+
+[data="panel"]::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 100%;
+  height: 101%;
+  clip-path: polygon(100% 0, 85% 100%, 100% 100%);
+  background-color: white;
+  z-index: 0;
+
+}
+
 
 html {
   scroll-behavior: smooth !important;
@@ -98,16 +112,19 @@ button:focus {
     }
   }
 }
-
-.nav-item > .nav-link:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #ff7f50;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-}
-.nav-item > .nav-link:hover:after {
-  transform: scaleX(1) !important;
+.nav-item {
+  .nav-link {
+    &:after {
+      display: block;
+      content: "";
+      border-bottom: solid 2px #ff7f50;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+    }
+    &:hover::after {
+      transform: scaleX(1) !important;
+    }
+  }
 }
 
 li > a {
@@ -115,10 +132,7 @@ li > a {
   font-weight: bold;
   font-size: 1.25rem;
 }
-.container-fluid {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-}
+
 
 .active {
   color: #ff7f50 !important;
@@ -128,15 +142,16 @@ li > a {
   position: relative;
   display: inline-block !important;
   margin-bottom: 2rem !important;
-}
-.header-text:after {
-  content: "";
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  height: 10%;
-  width: 200%;
-  background-color: #ff7f50;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 10%;
+    width: 130%;
+    background-color: #ff7f50;
+  }
 }
 
 .bg-first {
@@ -209,6 +224,7 @@ li > a {
   .quote {
     margin-top: 8rem !important;
     padding: 0 14rem 0 14rem !important;
+    overflow: hidden;
   }
 }
 .hr {
@@ -303,13 +319,14 @@ li > a {
   .project-shadow {
     margin: 0 1.5rem 0 1.5rem !important;
   }
-  .info-section {
+  .info--section {
     bottom: 5% !important;
     left: 5% !important;
-  }
-  .info-section__right {
-    bottom: 5% !important;
-    right: 5% !important;
+
+    &__right {
+      bottom: 5% !important;
+      right: 5% !important;
+    }
   }
 }
 @media (max-width: 991px) and (min-width: 576px) {
@@ -386,6 +403,8 @@ li > a {
     opacity: 0;
     z-index: 90;
     transition: opacity 0.5s ease-in-out;
+
+
   }
   .project-number__left {
     font-family: "Fira Sans", Arial, Helvetica, sans-serif;
@@ -414,7 +433,7 @@ li > a {
   z-index: 80;
   transition: width 0.15s;
 }
-.info-section {
+.info--section {
   font-family: "Fira Sans", Arial, Helvetica, sans-serif;
   display: block;
   position: absolute;
@@ -422,15 +441,16 @@ li > a {
   left: 10%;
   z-index: 1000;
   transition: all 0.2s ease-in-out;
-}
-.info-section__right {
-  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
-  display: block;
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
-  z-index: 1000;
-  transition: all 0.2s ease-in-out;
+
+  &__right {
+    font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    z-index: 1000;
+    transition: all 0.2s ease-in-out;
+  }
 }
 .btn-danger {
   background-image: linear-gradient(to right, #235aa6 0%, #ed4c67 51%, #235aa6 100%);
@@ -464,13 +484,13 @@ li > a {
     height: 100%;
     width: 100%;
   }
-  .info-section {
+  .info--section {
     transform: scale(110%);
   }
 }
 
 .project-info__reverse:hover {
-  .info-section__right {
+  .info--section__right {
     transform: scale(110%);
   }
   .project-number__left {
@@ -497,9 +517,10 @@ li > a {
   margin-right: 0.5rem;
   width: 37px;
   height: 37px;
-}
-.footer--icon:hover {
-  filter: none;
-  transition-duration: 0.2s;
-  transform: scale(110%);
+
+  &:hover {
+    filter: none;
+    transition-duration: 0.2s;
+    transform: scale(110%);
+  }
 }

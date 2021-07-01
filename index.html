@@ -23,11 +23,10 @@
       gtag("config", "G-JQC18GLF4C");
     </script>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="145" class="position-relative" id="#">
-    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top shadow py-3 border-bottom px-4 mx-auto">
-      <a class="navbar-brand d-flex text-decoration-none font-weight-bold" href="#">Hactuns</a>
+  <body data-spy="scroll" data-target=".navbar" class="position-relative" id="#">
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top shadow p-3">
+      <a class="navbar-brand text-decoration-none font-weight-bold" href="#">Hactuns</a>
       <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navCollapse">
-        <!-- Extra JS at bootstrap min js -->
         <div class="bars">
           <span></span>
           <span></span>
@@ -35,7 +34,7 @@
           <div class="other-bar"></div>
         </div>
       </button>
-      <div class="collapse navbar-collapse ml-auto" id="navCollapse">
+      <div class="collapse navbar-collapse" id="navCollapse">
         <ul class="navbar-nav container-fluid d-flex justify-content-end">
           <li class="nav-item">
             <a class="nav-link active" href="#home">Home</a>
@@ -87,11 +86,10 @@
           </div>
           <div class="mx-5 mt-5 py-5 quote">
             <div class="row shadow-lg">
-              <div class="col-lg-6 col-md-12 px-0 position-relative">
-                <img src="coding.png" class="img-fluid" />
-                <svg viewBox="0 0 20 104" class="h-100 img-fluid position-absolute" style="z-index: 0; top: 0; right: 0">
-                  <path d="M17.304 0H20v104H.825z" style="fill: white; stroke: white; stroke-width: 0"></path>
-                </svg>
+              <div class="col-lg-6 col-md-12 px-0 position-relative bg-white" data="panel">
+                <img src="coding.png" class="img-fluid"/>
+                
+                
               </div>
               <div class="col-lg-6 col-md-12 px-0 d-flex align-items-center bg-white">
                 <div class="d-flex py-5">
@@ -107,7 +105,7 @@
         <div class="container-fluid px-5 mx-auto pb-5 pt-3">
           <div class="row mx-5 mb-4">
             <div class="col-lg-6 col-md-12 px-1">
-              <h2 class="font-weight-bolder my-3 d-flex header-text">My Education</h2>
+              <h2 class="font-weight-bolder my-3 header-text pt-1">My Education</h2>
               <ul class="list-group">
                 <li class="list-item mt-4" data-scroll="fade-up">
                   <article>
@@ -156,7 +154,7 @@
               </ul>
             </div>
             <div class="col-lg-6 col-md-12 px-1">
-              <h2 class="font-weight-bolder my-3 d-flex header-text">My Experiences</h2>
+              <h2 class="font-weight-bolder my-3 header-text pt-1">My Experiences</h2>
               <ul class="list-group">
                 <li class="list-item mt-4" data-scroll="fade-up">
                   <article>
@@ -188,10 +186,8 @@
       </section>
       <section id="skill" class="bg-second">
         <div class="container-fluid px-5 mx-auto pb-4 pt-3">
-          <div class="row mx-5">
-            <div class="col px-0">
-              <h2 class="font-weight-bolder my-3 d-flex header-text">My Skills</h2>
-            </div>
+          <div class="mx-5">
+              <h2 class="font-weight-bolder my-3 header-text">My Skills</h2>
           </div>
           <div class="row mx-2 d-flex justify-content-center px-5 mx-4">
             <div class="col-xl-1 col-lg-3 col-md-3 col-sm-6">
@@ -246,10 +242,8 @@
         </div>
       </section>
       <section id="work" class="bg-first">
-        <div class="row mx-5 pt-4">
-          <div class="col px-0">
-            <h2 class="font-weight-bolder mb-3 mt-1 d-flex header-text">My Recent Project</h2>
-          </div>
+        <div class="p-4 mx-4">
+            <h2 class="font-weight-bolder header-text">My Recent Project</h2>
         </div>
         <div class="container project">
           <ul class="list-group">
@@ -261,7 +255,7 @@
                 <div class="cover-img"></div>
                 <div class="project-number" id="p1"></div>
                 <div class="project-mask"></div>
-                <div class="info-section">
+                <div class="info--section">
                   <h2 class="text-white mx-2 my-4">Ecommerce Website</h2>
                   <h5 class="text-white mx-2 mb-2">PHP Project</h5>
                   <p class="text-white mx-2">Demo user: tun@tun.com - tun</p>
@@ -280,7 +274,7 @@
                 <div class="cover-img"></div>
                 <div class="project-number__left" id="p2"></div>
                 <div class="project-mask"></div>
-                <div class="info-section__right">
+                <div class="info--section__right">
                   <h2 class="text-white mx-2 my-4 text-right">Calculator</h2>
                   <h5 class="text-white mx-2 mb-2 text-right">Learning Javascript</h5>
                   <div class="d-flex flex-row-reverse flex-wrap">
@@ -298,7 +292,7 @@
                 <div class="cover-img"></div>
                 <div class="project-number" id="p3"></div>
                 <div class="project-mask"></div>
-                <div class="info-section">
+                <div class="info--section">
                   <h2 class="text-white mx-2 my-4">Admin Dashboard Ecommerce</h2>
                   <h5 class="text-white mx-2 mb-2">PHP Project</h5>
                   <p class="text-white mx-2">Demo user: admin@admin.com - admin</p>
@@ -317,7 +311,7 @@
                 <div class="cover-img"></div>
                 <div class="project-number__left" id="p4"></div>
                 <div class="project-mask"></div>
-                <div class="info-section__right">
+                <div class="info--section__right">
                   <h2 class="text-white mx-2 my-4 text-right">Figure Landing Page</h2>
                   <h5 class="text-white mx-2 mb-2 text-right">Build with SCSS, Javascript</h5>
                   <div class="d-flex flex-row-reverse flex-wrap">
@@ -331,8 +325,8 @@
         </div>
       </section>
     </div>
-    <footer id="footer" class="bg-second border-top py-4">
-      <div class="container d-flex justify-content-center align-items-center h-100 px-2">
+    <footer id="footer" class="bg-second py-4">
+      <div class="d-flex justify-content-center align-items-center px-2">
         <a href="https://instagram.com/justafoolishh" target="blank">
           <img src="so/instagram.svg" class="img-fluid footer--icon" />
         </a>
