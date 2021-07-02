@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@800&display=swap");
 [data-scroll="fade-up"] {
   -webkit-transform: translateY(150%);
@@ -40,6 +40,20 @@
   transition: all 0.75s ease !important;
 }
 
+[data-scroll=zoom-out] {
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75);
+  -webkit-transform: all .75s ease;
+          transform: all .75s ease;
+}
+
+.zoom-out {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.75s ease !important;
+  transition: all 0.75s ease !important;
+}
+
 [data="panel"]::after {
   content: "";
   position: absolute;
@@ -51,6 +65,42 @@
           clip-path: polygon(100% 0, 85% 100%, 100% 100%);
   background-color: white;
   z-index: 0;
+}
+
+.header-logo {
+  background-image: -webkit-gradient(linear, left top, right top, from(#00f260), color-stop(#f79d00), color-stop(#0575e6), to(#64f38c));
+  background-image: linear-gradient(to right, #00f260, #f79d00, #0575e6, #64f38c);
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-size: 300%;
+  background-position: -100%;
+  -webkit-animation: animateHeader 10s infinite;
+          animation: animateHeader 10s infinite;
+}
+
+@-webkit-keyframes animateHeader {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+@keyframes animateHeader {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
 }
 
 html {
@@ -184,13 +234,23 @@ li > a {
   margin-bottom: 2rem !important;
 }
 
-.header-text::after {
+.header-text::before {
   content: "";
   position: absolute;
   bottom: -15px;
   left: 0;
   height: 10%;
-  width: 130%;
+  width: 75%;
+  background-color: #ff7f50;
+}
+
+.header-text::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  height: 10%;
+  width: 50%;
   background-color: #ff7f50;
 }
 
@@ -271,7 +331,7 @@ li > a {
 
 @media (min-width: 1140px) {
   .quote {
-    margin-top: 8rem !important;
+    margin-top: 5rem !important;
     padding: 0 14rem 0 14rem !important;
     overflow: hidden;
   }
