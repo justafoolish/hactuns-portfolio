@@ -3,27 +3,23 @@ document.querySelector(".navbar-toggler").addEventListener("click", function () 
     $(".navbar-toggler").toggleClass("is-menu-open");
   });
 
-const revealPosition = () => {
-    let windowHeight = window.innerHeight
-    let revealtop = element.getBoundingClientRect().top
-    let revealpoint = 100
-    
-    return revealtop - windowHeight < revealpoint
-}
-
 
 const reveal = () => {
-    var fadeUp = document.querySelectorAll("[data-scroll=fade-up]");
-    var fadeSide = document.querySelectorAll("[data-scroll=fade-left],[data-scroll=fade-right]");
-    var zoomOut = document.querySelectorAll("[data-scroll=zoom-out]");
-    
-    fadeUp.forEach(element => {
+    const fadeUp = document.querySelectorAll("[data-scroll=fade-up]");
+    const fadeSide = document.querySelectorAll("[data-scroll=fade-left],[data-scroll=fade-right]");
+    const zoomOut = document.querySelectorAll("[data-scroll=zoom-out]");
 
+    let revealPosition = (element) => {
         let windowHeight = window.innerHeight
         let revealtop = element.getBoundingClientRect().top
         let revealpoint = 100
+        
+        return (revealtop - windowHeight) < revealpoint
+    }
+    
+    fadeUp.forEach(element => {
 
-        if(revealtop - windowHeight < revealpoint) {
+        if(revealPosition(element)) {
             element.classList.add("fade-up")
         }
         else {
@@ -32,11 +28,8 @@ const reveal = () => {
     })
 
     fadeSide.forEach(element => {
-        let windowHeight = window.innerHeight
-        let revealtop = element.getBoundingClientRect().top
-        let revealpoint = 100
 
-        if(revealtop - windowHeight < revealpoint) {
+        if(revealPosition(element)) {
             element.classList.add("fade-side")
         }
         else {
@@ -45,11 +38,8 @@ const reveal = () => {
     })
 
     zoomOut.forEach(element => {
-        let windowHeight = window.innerHeight
-        let revealtop = element.getBoundingClientRect().top
-        let revealpoint = 100
 
-        if(revealtop - windowHeight < revealpoint) {
+        if(revealPosition(element)) {
             element.classList.add("zoom-out")
         }
         else {
