@@ -465,6 +465,15 @@ li > a {
   #p3::before {
     content: "03";
   }
+  #p4::before {
+    content: "04";
+  }
+  #p5::before {
+    content: "05";
+  }
+  #p6::before {
+    content: "06";
+  }
   .project-number {
     font-family: "Fira Sans", Arial, Helvetica, sans-serif;
     display: block;
@@ -512,6 +521,12 @@ li > a {
   }
   #p4::before {
     content: "04";
+  }
+  #p5::before {
+    content: "05";
+  }
+  #p6::before {
+    content: "06";
   }
   .project-number {
     font-family: "Fira Sans", Arial, Helvetica, sans-serif;
